@@ -344,6 +344,7 @@ extern char _rodata_end[];
 extern char _end[];
 extern char _payload_start[];
 extern char _payload_end[];
+extern char _start[];
 
 /*
  * These functions are guaranteed to copy by reading from src and writing to dst

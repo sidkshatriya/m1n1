@@ -106,7 +106,7 @@ int chainload_image(void *image, size_t size, char **vars, size_t var_cnt)
     next_stage.args[1] = (u64)new_image;
     next_stage.args[2] = new_base;
     next_stage.args[3] = image_size;
-    next_stage.args[4] = new_base + 0x800; // m1n1 entrypoint
+    next_stage.args[4] = new_base + (_start - _base); // _start is the m1n1 entrypoint
     next_stage.restore_logo = false;
 
     return 0;
